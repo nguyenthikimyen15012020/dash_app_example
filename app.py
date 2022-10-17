@@ -49,12 +49,12 @@ figLoiNhuanBanHangTheoNam = px.line(dfGroup, x='YEAR_ID', y="LoiNhuan",
                                     )
 
 
-figTileDoanhSo = px.sunburst(df, path=['YEAR_ID', 'MONTH_ID'], values='SALES',
+figTileDoanhSo = px.sunburst(df, path=['YEAR_ID', 'CATEGORY'], values='SALES',
                              color='SALES',
                              labels={'parent': 'Năm', 'id': 'Year / month','SALES': 'Doanh số'},
                              title='Tỉ lệ đóng góp của doanh số theo từng danh mục trong từng năm')
 
-figTileLoiNhuan = px.sunburst(df, path=['YEAR_ID', 'MONTH_ID'], values='LoiNhuan',
+figTileLoiNhuan = px.sunburst(df, path=['YEAR_ID', 'CATEGORY'], values='LoiNhuan',
                               color='LoiNhuan',
                               labels={'parent': 'Năm', 'id': 'Year / month', 'LoiNhuan': 'Lợi nhuận'},
                               title='Tỉ lệ đóng góp của lợi nhuận theo từng danh mục trong từng năm')
